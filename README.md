@@ -20,7 +20,6 @@
 - [(ฅ'ω'ฅ) 3. Pré-requisitos](#-3-pré-requisitos)
 - [(⊃｡•́‿•̀｡)⊃ 4. Instruções de Instalação e Execução](#-4-instruções-de-instalação-e-execução)
 - [(🔎 5. Testes e Validação de Acessibilidade](#-5-testes-e-validação-de-acessibilidade)
-- [(つ✧ω✧)つ 6. Contato & Suporte](#-6-contato--suporte)
 
 ---
 
@@ -38,7 +37,7 @@ A pilha de tecnologias e metodologias utilizadas no desenvolvimento inclui:
 
 - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) **HTML5 Semântico:** Marcação estrutural (`<header>`, `<main>`, `<nav>`, `<footer>`) otimizada para navegabilidade por leitores de tela.
 - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) **CSS3 & Atributos ARIA:** Estilização responsiva com foco em contraste cromático adequado e papéis semânticos (`aria-label`, `aria-expanded`).
-- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) **JavaScript (ES6+):** Lógica interativa da aplicação, validação acessível de formulários e manipulação dinâmicas do DOM com gerenciamento de foco por teclado.
+- ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) **JavaScript (ES6+):** Lógica interativa da aplicação, validação acessível de formulários e manipulação dinâmica do DOM com gerenciamento de foco por teclado.
 - ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white) **Git & GitHub:** Fluxo de trabalho baseado na metodologia **GitFlow**, versionamento semântico (**SemVer**) e **Conventional Commits**.
 
 ---
