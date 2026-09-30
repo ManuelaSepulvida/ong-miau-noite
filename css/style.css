@@ -1,0 +1,307 @@
+   :root {
+      /* Paleta de Cores (8 cores) */
+      --cor-primaria: #381d38;
+      --cor-primaria-hover: #261326;
+      --cor-secundaria: #5a2e5a;
+      --cor-sucesso: #2e7d32;
+      --cor-fundo-pagina: #efe3d8;
+      --cor-superficie-card: #ffffff;
+      --cor-divisor: #d1c4b8;
+      --cor-texto-secundario: #555555;
+
+      /* Escala Tipográfica (5 patamares) */
+      --familia-fonte: Arial, sans-serif;
+      --tipo-h1: 2rem;           /* 32px - Nível 1 */
+      --tipo-h2: 1.5rem;         /* 24px - Nível 2 */
+      --tipo-h3: 1.17rem;        /* 18.72px - Nível 3 */
+      --tipo-corpo: 1rem;        /* 16px - Nível 4 */
+      --tipo-pequeno: 0.8125rem; /* 13px - Nível 5 */
+
+      /* Espaçamentos Modulares */
+      --espaco-xs: 5px;
+      --espaco-sm: 8px;
+      --espaco-md: 10px;
+      --espaco-lg: 15px;
+      --espaco-xl: 25px;
+    }
+
+    /* ==========================================
+       2. ESTILOS BASE
+       ========================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--cor-fundo-pagina);
+      font-family: var(--familia-fonte);
+      font-size: var(--tipo-corpo);
+      color: #000000;
+      text-align: center;
+    }
+
+    h1 { 
+      font-size: var(--tipo-h1); 
+      color: var(--cor-primaria); 
+    }
+
+    h2 { 
+      font-size: var(--tipo-h2); 
+      color: var(--cor-primaria); 
+      margin-bottom: var(--espaco-md);
+      text-align: center;
+    }
+
+    h3 { 
+      font-size: var(--tipo-h3); 
+      color: var(--cor-primaria); 
+      margin-bottom: var(--espaco-xs);
+      text-align: center;
+    }
+
+    h4 {
+      color: var(--cor-primaria);
+      margin-bottom: var(--espaco-xs);
+    }
+    
+    p, li {
+      font-size: var(--tipo-corpo);
+      line-height: 1.5;
+    }
+
+    header {
+      padding: var(--espaco-lg);
+    }
+
+    nav {
+      background-color: var(--cor-superficie-card);
+      padding: var(--espaco-md);
+      margin-top: var(--espaco-md);
+    }
+
+    nav a {
+      color: var(--cor-primaria);
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 var(--espaco-xs);
+    }
+
+    nav a:hover {
+      color: var(--cor-secundaria);
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--cor-divisor);
+      margin: var(--espaco-xl) auto;
+      width: 85%;
+    }
+
+    footer {
+      text-align: center;
+      font-size: var(--tipo-pequeno);
+      color: var(--cor-texto-secundario);
+      padding: var(--espaco-lg);
+    }
+
+    /* ==========================================
+       3. MACRO ESTRUTURA EM CSS GRID (12 COLUNAS)
+       ========================================== */
+    main {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--espaco-md);
+      text-align: left;
+    }
+
+    .grid-12 {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--espaco-lg);
+    }
+
+    /* Estilos da Seção Sobre */
+    .img-sobre {
+      width: 100%;
+      display: block;
+    }
+
+    .card-cadastro {
+      border: 2px dashed var(--cor-primaria);
+      background-color: var(--cor-superficie-card);
+      padding: var(--espaco-md);
+      margin-top: var(--espaco-md);
+      text-align: center;
+    }
+
+    .texto-sobre p {
+      margin-bottom: var(--espaco-md);
+    }
+
+    /* Componente de Card dos Gatos */
+    article.card-gato {
+      background-color: var(--cor-superficie-card);
+      border: 2px dashed var(--cor-primaria);
+      padding: var(--espaco-md);
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    article.card-gato img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: var(--espaco-sm);
+    }
+
+    article.card-gato p {
+      text-align: center;
+      font-size: 0.875rem;
+    }
+
+    .btn-acao {
+      display: inline-block;
+      background-color: var(--cor-primaria);
+      color: #ffffff;
+      text-decoration: none;
+      padding: var(--espaco-sm) var(--espaco-md);
+      font-size: var(--tipo-pequeno);
+      font-weight: bold;
+      margin-top: var(--espaco-md);
+      text-align: center;
+    }
+
+    .btn-acao:hover {
+      background-color: var(--cor-primaria-hover);
+    }
+
+    /* ==========================================
+       4. COMPORTAMENTO RESPONSIVO (5 BREAKPOINTS)
+       ========================================== */
+
+    /* Breakpoint 1: Extra Pequeno (até 480px) - Mobile Retrato */
+    @media (max-width: 480px) {
+      .col-card { grid-column: span 12; }
+      .col-sobre-img { grid-column: span 12; }
+      .col-sobre-texto { grid-column: span 12; }
+    }
+
+    /* Breakpoint 2: Pequeno (481px a 768px) - Mobile Paisagem / Tablet Retrato */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .col-card { grid-column: span 6; }
+      .col-sobre-img { grid-column: span 12; }
+      .col-sobre-texto { grid-column: span 12; }
+    }
+
+    /* Breakpoint 3: Médio (769px a 1024px) - Tablet Paisagem / Laptops */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .col-card { grid-column: span 4; }
+      .col-sobre-img { grid-column: span 5; }
+      .col-sobre-texto { grid-column: span 7; }
+    }
+
+    /* Breakpoint 4: Grande (1025px a 1440px) - Desktops Padrão */
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      .col-card { grid-column: span 4; }
+      .col-sobre-img { grid-column: span 4; }
+      .col-sobre-texto { grid-column: span 8; }
+    }
+
+    /* Breakpoint 5: Extra Grande (acima de 1441px) - Monitores Panorâmicos */
+    @media (min-width: 1441px) {
+      main { max-width: 1400px; }
+      .col-card { grid-column: span 4; }
+      .col-sobre-img { grid-column: span 3; }
+      .col-sobre-texto { grid-column: span 9; }
+    }
+
+    /* ==========================================
+   FORMULÁRIO DE CADASTRO
+   ========================================== */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--cor-superficie-card);
+  padding: var(--espaco-lg);
+  border: 2px dashed var(--cor-primaria);
+  text-align: left;
+}
+
+fieldset {
+  border: 1px solid var(--cor-divisor);
+  border-radius: 6px;
+  padding: var(--espaco-lg);
+  margin-bottom: var(--espaco-lg);
+}
+
+legend {
+  font-weight: bold;
+  color: var(--cor-primaria);
+  padding: 0 var(--espaco-xs);
+}
+
+.campo-form {
+  margin-bottom: var(--espaco-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-form label {
+  font-size: var(--tipo-pequeno);
+  font-weight: bold;
+  color: var(--cor-primaria);
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--familia-fonte);
+  font-size: var(--tipo-corpo);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--cor-primaria);
+}
+
+/* Botão do formulário */
+button[type="submit"],
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border: none;
+  padding: var(--espaco-md);
+  font-size: var(--tipo-corpo);
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.mensagem-sucesso {
+  text-align: center;
+  margin-top: var(--espaco-xl);
+  padding: var(--espaco-lg);
+  background-color: #e8f5e9;
+  border: 1px solid var(--cor-sucesso);
+  border-radius: 6px;
+}
