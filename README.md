@@ -59,3 +59,14 @@ Siga os passos abaixo para rodar o projeto na sua máquina:
 1. **Clone este repositório:**
    ```bash
    git clone [https://github.com/ManuelaSepulvida/ong-miau-noite.git](https://github.com/ManuelaSepulvida/ong-miau-noite.git)
+
+---
+
+   ## (🔎 5 Testes e Validação de Acessibilidade
+
+A garantia de qualidade e acessibilidade da plataforma **ONG Miau-Noite** é mantida por meio de rigorosos procedimentos de teste e auditoria, assegurando plena conformidade com as diretrizes internacionais **WCAG 2.1 no nível AA**:
+
+- (🎨) **Análise Automatizada de Contraste e Acessibilidade:** Execução de auditorias através das ferramentas **Google Lighthouse** e **WAVE (Web Accessibility Evaluation Tool)**, garantindo uma razão de contraste cromático mínima de **4.5:1** para textos normais e **3:1** para elementos gráficos e textos grandes.
+- (⌨️) **Navegabilidade e Gestão de Foco por Teclado:** Validação manual de todo o fluxo de interação utilizando exclusivamente os comandos `Tab`, `Shift + Tab`, `Enter` e `Esc`. Todos os elementos interativos possuem indicadores visuais claros de foco (`:focus-visible`) e ordem lógica de tabulação.
+- (🔊) **Compatibilidade com Tecnologias Assistivas:** Auditoria de leitura e navegação estrutural realizada com leitores de tela (**NVDA**, **JAWS** e **VoiceOver**), validando a precisão das rótulas `aria-label`, estados dinâmicos `aria-expanded` e marcos semânticos (`<header>`, `<main>`, `<nav>`, `<footer>`).
+- (📐) **Validação Sintática W3C:** Verificação de conformidade de código por meio do **W3C Markup Validation Service** (para HTML5) e **W3C CSS Validation Service**, garantindo a ausência de erros sintáticos ou marcações obsoletas.
